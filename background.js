@@ -32,7 +32,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
     if (tabId === chatGptTabId && "audible" in changeInfo) {
         if (changeInfo.audible) {
             console.log("ChatGPT is speaking. Reducing volume of other tabs.");
-            adjustOtherTabsVolume(0.35);
+            adjustOtherTabsVolume(0.12);
         } else {
             console.log("ChatGPT is silent. Restoring volume of other tabs.");
             adjustOtherTabsVolume(1.0);
